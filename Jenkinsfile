@@ -46,7 +46,8 @@ pipeline{
 		stage('Deploy')
 			{
 				steps
-        {				sh '''
+        {				echo "deploy started"
+			sh '''
 						scp target/*.jar ec2-user@15.252.140.184:/opt/tomcat/webapps/   '''
 				}
 			}
