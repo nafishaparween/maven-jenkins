@@ -42,7 +42,7 @@ pipeline{
 			{
 				steps
         {				sh '''
-						scp target/*.jar ec2-user@15.252.140.184:/opt/tomcat/webapps/   
+						scp target/*.jar ec2-user@15.252.140.184:/opt/tomcat/webapps/   '''
 				}
 			}
 			}
