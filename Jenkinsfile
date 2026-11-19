@@ -43,13 +43,17 @@ pipeline{
 				}
 			}
 
-		stage('Deploy')
-			{
-				steps
-        {				echo "deploy started"
-			sh '''
-						scp target/*.jar \ ec2-user@15.252.140.184:/opt/tomcat/webapps/   '''
-				}
-			}
+		stage('Deploy') {
+    steps {
+        sh '''
+            echo "Copying JAR to Tomcat EC2..."
+
+            scp target/*.jar \
+            ec2-user@15.252.140.184:/opt/tomcat/webapps/
+
+            echo "JAR copied successfully!"
+        '''
+    }
+}
 			}
 }
