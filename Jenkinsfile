@@ -48,8 +48,7 @@ pipeline{
         sh '''
             echo "Copying JAR to Tomcat EC2..."
 
-            scp target/*.jar \
-            ec2-user@15.252.140.184:/opt/tomcat/webapps/
+            scp target/*.jar ec2-user@15.252.140.184:/opt/tomcat/webapps/
 
             echo "JAR copied successfully!"
         '''
