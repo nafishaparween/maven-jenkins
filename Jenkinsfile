@@ -50,7 +50,7 @@ pipeline{
 
             scp -i /var/lib/jenkins/.ssh/id_rsa \
                     target/*.jar \
-                    ec2-user@15.252.140.184:/opt/tomcat/webapps/
+                    ec2-user@15.252.140.184:/home/ec2-user/tomcat/webapps/
 
             echo "JAR copied successfully!"
         '''
